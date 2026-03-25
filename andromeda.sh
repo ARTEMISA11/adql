@@ -35,7 +35,7 @@ python3 graficar_mapa.py
 
 echo " Guardando en Control de Versiones... "
 echo "andromeda.csv" > .gitignore
-git add andromeda.sh graficar_mapa.py andromeda.png .gitignore
+git add andromeda.sh graficar_mapa.py mapa_andromeda.png .gitignore
 
 git commit -m "Pipeline automático: Cone Search y Mapeo de andromeda"
 echo "¡Proceso 100% reproducible completado!"
