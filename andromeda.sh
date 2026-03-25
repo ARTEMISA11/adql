@@ -1,7 +1,7 @@
 echo = "Iniciamos proceso"
 
 # Guardamos la consulta pura.
-ADQL="SELECT TOP 2000 RA_ICRS, DE_ICRS, Gmag FROM \"I/355/gaiadr3\" WHERE Gmag < 16 AND 1=CONTAINS(POINT('ICRS', RA_ICRS, DE_ICRS), CIRCLE('ICRS', 10.68, 41.26, 3.0))"
+ADQL="SELECT RA_ICRS, DE_ICRS, Gmag FROM \"I/355/gaiadr3\" WHERE Gmag < 16 AND 1=CONTAINS(POINT('ICRS', RA_ICRS, DE_ICRS), CIRCLE('ICRS', 10.68, 41.26, 3.0))"
 
 # Reemplazamos los espacios por '+' usando 'sed' para que la URL no se rompa en internet
 URL_ADQL=$(echo $ADQL | sed 's/ /+/g')
